@@ -1,0 +1,19 @@
+[package]
+name = "axon-cli"
+version = "0.1.0"
+edition = "2021"
+authors = ["nowii-core"]
+description = "Zero-dependency terminal AI agent runtime in Rust with sandboxed tool execution, persistent memory, and deterministic trace logs."
+license = "MIT"
+repository = "https://github.com/nowii-core/axon-cli"
+keywords = ["ai", "agent", "runtime", "cli", "zero-dependency"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+# Zero external crate dependencies — pure Rust std library
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true

@@ -1,0 +1,4 @@
+/target
+/.axon
+*.log
+.DS_Store
