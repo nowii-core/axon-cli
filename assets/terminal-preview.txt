@@ -1,0 +1,29 @@
+$ axon-cli doctor
+Axon Runtime Doctor (v0.1.0)
+────────────────────────────────────────────────────────
+  Workspace     : ~/Downloads/axon-cli
+  State Dir     : ~/Downloads/axon-cli/.axon
+  LLM Endpoint  : http://127.0.0.1:8080/v1/chat/completions -> [33mOFFLINE FALLBACK[0m (unreachable (127.0.0.1:8080): Connection refused (os error 61))
+  Model         : local-default
+  Memory Store  : local-json-store (0 entries)
+  Saved Traces  : 2
+  Shell Policy  : disabled (strict sandbox)
+
+$ axon-cli run "Inspect workspace files and summarize README"
+[32m✓ Run completed[0m  id=[1mrun-1795515221-001a[0m  steps=3  latency=0ms
+────────────────────────────────────────────────────────
+  [ 1] tool   list_dir       (  0ms) -> ok
+  [ 2] tool   read_file      (  0ms) -> ok
+  [ 3] final  respond        (  0ms) -> ok
+────────────────────────────────────────────────────────
+Goal 'Inspect workspace files and summarize README' completed in 2 step(s). Latest observation from `read_file`:
+# axon-cli
+
+Zero-dependency terminal AI agent runtime in Rust with sandboxed tool execution, persistent memory, and deterministic trace logs.
+
+Designed as the execution layer for the local AI infrastructure stack alongside [`vectorcore`](https://github.com/nowii-core/vectorcore) (hybrid vector & BM25 search) and [`contextshield`](https://github.com/nowii-core/contextshield) (AI security gateway & secret redaction).
+
+## Architecture
+
+```text
+┌──────────────────────────────────...

@@ -48,7 +48,9 @@ axon-cli
 
 ## Preview
 
-<i<img src="preview.png" width="100%" alt="axon-cli terminal preview">
+<p align="center">
+  <img src="preview.png" width="100%" alt="axon-cli terminal preview">
+</p>
 
 > **Deterministic Local Execution:** Runs bounded goal loops (`list_dir`, `read_file`, `respond`) with sub-millisecond local step timing and automatic offline fallback when no local LLM endpoint is active.
 
